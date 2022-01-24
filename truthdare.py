@@ -5,47 +5,62 @@ import time
 
 state = 1
 
+count = 1
+
+
+
+
+
 while(state == 1):
 
-    t = 1
-    print("\n\n")
-    print("#############################################")
-    time.sleep(t)
-    print("\tMADE BY AUSHAIF")
-    time.sleep(t)
-    print("#############################################")
-    time.sleep(t)
-    print("\n\n")
-    print("#############################################")
-    time.sleep(t)
-    print("\tWELCOME TO TRUTH AND DARE GAME...")
-    time.sleep(t)
-    print("#############################################")
-    time.sleep(t)
-    print("\n\n")
-    print("#############################################")
-    time.sleep(t)
-    print("\tGAME IS STARTING SOON")
-    time.sleep(t)
-    print("#############################################")
-    print("\n\n")
-    
-    
-    players = []
-    print("----------------------------------------")
-    player_num = int(input("\tEnter the number of player : ")) # 10
-    print("----------------------------------------")
+    if(count == 1):
 
-    for i in range(1, player_num + 1):
-        print("*********************************")
-        name = input("Enter Player {} Name : ".format(i))
-        print("*********************************")
-        players.append(name)
+        t = 1
+        print("\n\n")
+        print("#############################################")
+        print("\tMADE BY AUSHAIF")
+        print("#############################################")
+        
+
+        time.sleep(t)
+        
+        print("\n\n")
+        print("#############################################")
+        print("\tWELCOME TO TRUTH AND DARE GAME...")
+        print("#############################################")
+
+        time.sleep(t)
+
+        print("\n\n")
+        print("#############################################")
+        print("\tGAME IS STARTING SOON")
+        print("#############################################")
+        print("\n\n")
+        
+        
+        players = []
+        print("----------------------------------------")
+        player_num = int(input("\tEnter the number of player : ")) # 10
+        print("----------------------------------------")
+
+        for i in range(1, player_num + 1):
+            print("\n")
+            name = input("Enter Player {} Name : ".format(i))
+            print("\n")
+            players.append(name)
+
+
+    count = 2    
 
 
     def bottle():
         x = random.randrange(1, player_num + 1)
         return x
+
+    
+        
+
+
     
     print("\n")    
     print("-----------------------------------------------------")
@@ -56,13 +71,13 @@ while(state == 1):
 
     y = bottle()
 
-    print("\n")
+
     print("\t--------------------------------------------")
     print("\n")
-    print("\t\t\tTARGET : ", players[y - 1])
+    print("\tBALLI KA BAKRA [TARGET] : ", players[y - 1])
     print("\n")
     print("\t--------------------------------------------")
-    print("\n")
+    
 
     print("\n")
     print("------------------------------------------------------")
@@ -95,13 +110,15 @@ while(state == 1):
     print("\n")
     print("------------------------------------------------------------------------")
     print("\n")
+        
 
 
     if(choice == 'e'):
         state = 0
     elif(choice == 'r'):
         print("GAME RESTARTING...")
-        time.sleep(3)
+        time.sleep(1.5)
 
-
-print("GAME OVER")
+print("\n")
+print("\t\tGAME OVER")
+print("\n")
